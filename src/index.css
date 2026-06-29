@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ */
+/*  Sri Amutha Dental Care — Design System (warm clinical-premium)     */
+/* ------------------------------------------------------------------ */
+@theme {
+  /* Brand color tokens */
+  --color-ink: #14302e;
+  /* deep teal-charcoal text */
+  --color-ink-soft: #2c4b48;
+  --color-muted: #6b7b79;
+
+  --color-primary: #0e8f8a;
+  /* trust teal */
+  --color-primary-600: #0b736f;
+  --color-primary-700: #095e5b;
+  --color-primary-100: #d6efed;
+
+  --color-sand: #e9dcc9;
+  /* warm soft section */
+  --color-sand-soft: #f3ebdf;
+  --color-cream: #fbfaf7;
+  /* warm off-white background */
+  --color-surface: #ffffff;
+
+  --color-whatsapp: #25d366;
+  --color-whatsapp-600: #1eb854;
+
+  /* Typography */
+  --font-display: 'Clash Display', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'General Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* Radius */
+  --radius-card: 1.25rem;
+
+  /* Soft shadow */
+  --shadow-soft: 0 10px 30px rgba(20, 48, 46, 0.08);
+  --shadow-lift: 0 18px 50px rgba(20, 48, 46, 0.14);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: 'ss01';
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: #fff;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
