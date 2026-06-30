@@ -33,12 +33,11 @@ export const whatsappLink = (message?: string) => {
 }
 
 export const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'Services', href: '#services' },
-    { label: 'Why Us', href: '#why-us' },
-    { label: 'Reviews', href: '#reviews' },
-    { label: 'Book', href: '#book' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Services', href: '#services', route: false },
+    { label: 'About', href: '#about', route: false },
+    { label: 'Reviews', href: '#reviews', route: false },
+    { label: 'Blog', href: '/blog', route: true },
+    { label: 'Contact', href: '#contact', route: false },
 ]
 
 // ---------------------------------------------------------------------------
