@@ -1,32 +1,21 @@
+import { Routes, Route } from 'react-router-dom'
 import { SmoothScroll } from '@/components/SmoothScroll'
 import { Navbar } from '@/components/sections/Navbar'
-import { Hero } from '@/components/sections/Hero'
-import { TrustStrip } from '@/components/sections/TrustStrip'
-import { Services } from '@/components/sections/Services'
-import { WhyUs } from '@/components/sections/WhyUs'
-import { About } from '@/components/sections/About'
-import { Reviews } from '@/components/sections/Reviews'
-import { Faq } from '@/components/sections/Faq'
-import { Contact } from '@/components/sections/Contact'
-import { CtaBand } from '@/components/sections/CtaBand'
 import { Footer } from '@/components/sections/Footer'
 import { MobileBar } from '@/components/sections/MobileBar'
+import { Home } from '@/pages/Home'
+import { Blog } from '@/pages/Blog'
+import { Article } from '@/pages/Article'
 
 function App() {
   return (
     <SmoothScroll>
       <Navbar />
-      <main>
-        <Hero />
-        <TrustStrip />
-        <Services />
-        <WhyUs />
-        <About />
-        <Reviews />
-        <Faq />
-        <Contact />
-        <CtaBand />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<Article />} />
+      </Routes>
       <Footer />
       <MobileBar />
     </SmoothScroll>

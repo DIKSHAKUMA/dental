@@ -36,8 +36,8 @@ export const navLinks = [
     { label: 'Home', href: '#home' },
     { label: 'Services', href: '#services' },
     { label: 'Why Us', href: '#why-us' },
-    { label: 'About', href: '#about' },
     { label: 'Reviews', href: '#reviews' },
+    { label: 'Book', href: '#book' },
     { label: 'Contact', href: '#contact' },
 ]
 
@@ -168,4 +168,21 @@ export const faqs = [
         q: 'What about hygiene and safety?',
         a: 'Every instrument is sterilised and every treatment room sanitised to strict hospital-grade protocols before each patient.',
     },
+]
+
+// ---------------------------------------------------------------------------
+// Booking form (Web3Forms — free, no backend). Replace the placeholder key with
+// the real one from https://web3forms.com (tied to the doctor's email inbox).
+// ---------------------------------------------------------------------------
+export const web3formsAccessKey = 'YOUR_WEB3FORMS_ACCESS_KEY'
+
+export const serviceOptions = [
+    'Micro-Surgical Root Canal',
+    'Dental Implants',
+    'Braces & Aligners',
+    'Crowns & Bridges',
+    'Teeth Whitening',
+    'Kids Dentistry',
+    'Gum Care',
+    'General Check-up',
 ]

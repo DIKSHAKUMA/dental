@@ -1,26 +1,26 @@
 @import 'tailwindcss';
 
 /* ------------------------------------------------------------------ */
-/*  Sri Amutha Dental Care — Design System (warm clinical-premium)     */
+/*  Sri Amutha Dental Care — Design System (clean clinical blue)       */
 /* ------------------------------------------------------------------ */
 @theme {
   /* Brand color tokens */
-  --color-ink: #14302e;
-  /* deep teal-charcoal text */
-  --color-ink-soft: #2c4b48;
-  --color-muted: #6b7b79;
+  --color-ink: #0f2540;
+  /* deep blue-charcoal text */
+  --color-ink-soft: #2b425f;
+  --color-muted: #64748b;
 
-  --color-primary: #0e8f8a;
-  /* trust teal */
-  --color-primary-600: #0b736f;
-  --color-primary-700: #095e5b;
-  --color-primary-100: #d6efed;
+  --color-primary: #1d6fe0;
+  /* trust blue */
+  --color-primary-600: #155bc0;
+  --color-primary-700: #11489c;
+  --color-primary-100: #dcebfb;
 
-  --color-sand: #e9dcc9;
-  /* warm soft section */
-  --color-sand-soft: #f3ebdf;
-  --color-cream: #fbfaf7;
-  /* warm off-white background */
+  --color-sand: #dcebfb;
+  /* soft blue tint section */
+  --color-sand-soft: #eef5fd;
+  --color-cream: #f7faff;
+  /* clean near-white background */
   --color-surface: #ffffff;
 
   --color-whatsapp: #25d366;
@@ -34,14 +34,18 @@
   --radius-card: 1.25rem;
 
   /* Soft shadow */
-  --shadow-soft: 0 10px 30px rgba(20, 48, 46, 0.08);
-  --shadow-lift: 0 18px 50px rgba(20, 48, 46, 0.14);
+  --shadow-soft: 0 10px 30px rgba(15, 37, 64, 0.08);
+  --shadow-lift: 0 18px 50px rgba(15, 37, 64, 0.14);
 }
 
 @layer base {
   html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+  }
+
+  section[id] {
+    scroll-margin-top: 90px;
   }
 
   body {

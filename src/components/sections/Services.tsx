@@ -65,7 +65,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
                 className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 style={{
                     background:
-                        'radial-gradient(220px circle at var(--x, 50%) var(--y, 50%), rgba(14,143,138,0.12), transparent 70%)',
+                        'radial-gradient(220px circle at var(--x, 50%) var(--y, 50%), rgba(29,111,224,0.14), transparent 70%)',
                 }}
                 aria-hidden
             />

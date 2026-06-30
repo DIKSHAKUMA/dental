@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight, Quote, Star } from 'lucide-react'
 import { testimonials } from '@/lib/site'
 
-const AVATAR_TINTS = ['#0E8F8A', '#2C4B48', '#0B736F', '#6B7B79']
+const AVATAR_TINTS = ['#1D6FE0', '#11489C', '#155BC0', '#2B425F']
 
 export function Reviews() {
     const [index, setIndex] = useState(0)

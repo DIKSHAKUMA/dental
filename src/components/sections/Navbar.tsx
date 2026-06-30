@@ -1,9 +1,12 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Menu, X, MessageCircle, Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { navLinks, site, whatsappLink } from '@/lib/site'
 import { MagneticButton } from '@/components/ui/MagneticButton'
+import { Logo, ToothMark } from '@/components/ui/Logo'
+import { SectionLink } from '@/components/ui/SectionLink'
 
 export function Navbar() {
     const [scrolled, setScrolled] = useState(false)
@@ -33,30 +36,33 @@ export function Navbar() {
                 )}
             >
                 {/* Logo */}
-                <a href="#home" className="flex items-center gap-2.5 shrink-0">
-                    <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-white font-display text-lg">
-                        S
+                <Link to="/" className="flex items-center gap-2.5 shrink-0">
+                    <Logo className="hidden sm:flex" />
+                    <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-white sm:hidden">
+                        <ToothMark className="h-5 w-5" />
                     </span>
-                    <span className="hidden sm:flex flex-col leading-none">
-                        <span className="font-display text-[1.05rem] text-ink">Sri Amutha</span>
-                        <span className="text-[0.6rem] uppercase tracking-[0.18em] text-muted">
-                            Dental Care
-                        </span>
-                    </span>
-                </a>
+                </Link>
 
                 {/* Desktop links */}
                 <ul className="hidden md:flex items-center gap-1">
                     {navLinks.map((link) => (
                         <li key={link.href}>
-                            <a
+                            <SectionLink
                                 href={link.href}
                                 className="relative rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft transition-colors hover:text-primary"
                             >
                                 {link.label}
-                            </a>
+                            </SectionLink>
                         </li>
                     ))}
+                    <li>
+                        <Link
+                            to="/blog"
+                            className="relative rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft transition-colors hover:text-primary"
+                        >
+                            Blog
+                        </Link>
+                    </li>
                 </ul>
 
                 {/* CTAs */}
@@ -107,15 +113,24 @@ export function Navbar() {
                         <ul className="flex flex-col">
                             {navLinks.map((link) => (
                                 <li key={link.href}>
-                                    <a
+                                    <SectionLink
                                         href={link.href}
                                         onClick={() => setOpen(false)}
                                         className="block rounded-2xl px-4 py-3 text-base font-medium text-ink-soft transition-colors hover:bg-cream hover:text-primary"
                                     >
                                         {link.label}
-                                    </a>
+                                    </SectionLink>
                                 </li>
                             ))}
+                            <li>
+                                <Link
+                                    to="/blog"
+                                    onClick={() => setOpen(false)}
+                                    className="block rounded-2xl px-4 py-3 text-base font-medium text-ink-soft transition-colors hover:bg-cream hover:text-primary"
+                                >
+                                    Blog
+                                </Link>
+                            </li>
                         </ul>
                     </motion.div>
                 )}

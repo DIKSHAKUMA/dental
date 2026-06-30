@@ -1,5 +1,8 @@
 import { MapPin, Phone, Clock, Mail } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { site, navLinks } from '@/lib/site'
+import { ToothMark } from '@/components/ui/Logo'
+import { SectionLink } from '@/components/ui/SectionLink'
 
 export function Footer() {
     return (
@@ -9,11 +12,11 @@ export function Footer() {
                     {/* Brand */}
                     <div>
                         <div className="flex items-center gap-2.5">
-                            <span className="grid h-9 w-9 place-items-center rounded-full bg-primary font-display text-lg text-white">
-                                S
+                            <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-white">
+                                <ToothMark className="h-5 w-5" />
                             </span>
                             <div className="leading-none">
-                                <p className="font-display text-lg text-white">Sri Amutha</p>
+                                <p className="font-display text-lg font-semibold text-white">Sri Amutha</p>
                                 <p className="text-[0.6rem] uppercase tracking-[0.18em] text-cream/50">
                                     Dental Care
                                 </p>
@@ -32,14 +35,22 @@ export function Footer() {
                         <ul className="mt-4 grid grid-cols-2 gap-2">
                             {navLinks.map((link) => (
                                 <li key={link.href}>
-                                    <a
+                                    <SectionLink
                                         href={link.href}
                                         className="text-sm text-cream/70 transition-colors hover:text-primary"
                                     >
                                         {link.label}
-                                    </a>
+                                    </SectionLink>
                                 </li>
                             ))}
+                            <li>
+                                <Link
+                                    to="/blog"
+                                    className="text-sm text-cream/70 transition-colors hover:text-primary"
+                                >
+                                    Blog
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
